@@ -1,5 +1,6 @@
-# Scanner
-扫一扫，扫描手机号码，扫描条形码，扫描二维码
+# Scanner 
+#### 扫一扫，扫描手机号码，扫描条形码，扫描二维码
+#### 基于>[BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)的功能上增加可以扫描快递单上的手机号码
 
 ## 自定义可以扫描手机号码的扫一扫
 
@@ -47,3 +48,6 @@
 
 ## 具体用法请查看DEMO
 >[MainActivity](https://github.com/scalling/Scanner/blob/master/app/src/main/java/com/zm/scanner/MainActivity.java)
+
+##借鉴
+>[BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)
