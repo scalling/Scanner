@@ -1,7 +1,7 @@
 # Scanner 扫一扫，扫描手机号码
 #### 是在[BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)的功能上增加实现的识别手机号码,是基于Tesseract-OCR实现的数字自动识别
 
-## 自定义可以扫描手机号码的扫一扫
+## 使用
 ```
      <com.zm.scanner.view.PhoneZXingView
             android:id="@+id/my_zxing_view"
