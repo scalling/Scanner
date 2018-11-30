@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">手机号码扫描</string>
+    <dimen name="scan_btn_height">50dp</dimen>
+    <dimen name="scan_parent_height">250dp</dimen>
+    <dimen name="scan_express_width">230dp</dimen>
+    <dimen name="scan_express_height">100dp</dimen>
+    <dimen name="scan_express_top">50dp</dimen>
+    <dimen name="scan_phone_top">75dp</dimen>
+    <dimen name="scan_phone_height">50dp</dimen>
+</resources>
