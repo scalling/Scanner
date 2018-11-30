@@ -2,7 +2,7 @@
 #### 是在[BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)的功能上增加实现的识别手机号码,是基于Tesseract-OCR实现的数字自动识别
 
 ## 自定义可以扫描手机号码的扫一扫
-
+```
      <com.zm.scanner.view.PhoneZXingView
             android:id="@+id/my_zxing_view"
             android:layout_width="match_parent"
@@ -25,10 +25,13 @@
             app:qrcv_scanLineMargin="0dp"
             app:qrcv_scanLineSize="0.5dp"
             app:qrcv_topOffset="@dimen/scan_express_height" />
+ ```          
  ## 方法
+ ```
      setScannerPhone true扫描手机号码 false 扫描条形码、二维码
-
+```
 ## 需要权限
+```
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
@@ -44,12 +47,16 @@
     <uses-feature
         android:name="android.hardware.camera.flash"
         android:required="false"/>
-
+```
 ## 具体用法请查看DEMO
 >[MainActivity](https://github.com/scalling/Scanner/blob/master/app/src/main/java/com/zm/scanner/MainActivity.java)
 
 ##Thanks For
->[BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)
->[tess-two](https://github.com/rmtheis/tess-two)
+
+* [BGAQRCode-Android](https://github.com/bingoogolapple/BGAQRCode-Android)
+* [tess-two](https://github.com/rmtheis/tess-two)
+
 ## 参考
->[Tesseract-OCR-Scanne](https://github.com/simplezhli/Tesseract-OCR-Scanner)
+
+* [Tesseract-OCR-Scanne](https://github.com/simplezhli/Tesseract-OCR-Scanner)
+
