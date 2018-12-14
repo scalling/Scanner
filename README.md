@@ -49,9 +49,11 @@
         android:required="false"/>
 ```
 ## 图片展示
- <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_1.jpg" width = "200"/>
- <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_2.jpg" width = "200"/>
- <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_3.jpg" width = "200"/>
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_1.jpg" width = "200" align="left"/>
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_2.jpg" width = "200" align="left"/>
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_3.jpg" width = "200" />
+ 
+
 ## 具体用法请查看DEMO
 >[MainActivity](https://github.com/scalling/Scanner/blob/master/app/src/main/java/com/zm/scanner/MainActivity.java)
 
