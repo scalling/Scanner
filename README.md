@@ -49,9 +49,9 @@
         android:required="false"/>
 ```
 ## 图片展示
- <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_1.jpg" width = "300" align="left"/>
- <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_2.jpg" width = "300" align="left"/>
- <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_3.jpg" width = "300" />
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_1.jpg" width = "250" align="left"/>
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_2.jpg" width = "250" align="left"/>
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/Screenshot_3.jpg" width = "250" />
  
 
 ## 具体用法请查看DEMO
