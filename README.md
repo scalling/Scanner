@@ -53,6 +53,8 @@
 ![Image text](https://github.com/scalling/Scanner/blob/master/screenshot/2.png)
 ![Image text](https://github.com/scalling/Scanner/blob/master/screenshot/3.png)
 
+ <img src="https://github.com/scalling/Scanner/blob/master/screenshot/1.png" width = "100"/>
+
 ## 具体用法请查看DEMO
 >[MainActivity](https://github.com/scalling/Scanner/blob/master/app/src/main/java/com/zm/scanner/MainActivity.java)
 
