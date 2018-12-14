@@ -1,12 +1,14 @@
 package com.zm.scanner;
 
 import android.Manifest;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zm.scanner.view.PhoneZXingView;
@@ -24,7 +26,26 @@ public class MainActivity extends AppCompatActivity implements QRCodeView.Delega
     TextView tvPhoneNumber;
     TextView tvLight;
     boolean isLight = false;
-    final RxPermissions rxPermissions = new RxPermissions(this);
+
+    public static void nav(final AppCompatActivity activity) {
+        RxPermissions rxPermissions = new RxPermissions(activity);
+        rxPermissions
+                .request(Manifest.permission.CAMERA)
+                .subscribe(new Consumer<Boolean>() {
+                    @Override
+                    public void accept(Boolean aBoolean) throws Exception {
+                        if (!aBoolean) {
+                            Toast.makeText(activity, "扫描二维码需要打开相机的权限", Toast.LENGTH_SHORT).show();
+                        } else {
+                            activity.startActivity(new Intent(activity, MainActivity.class));
+                            activity.finish();
+
+                        }
+
+                    }
+                });
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +78,8 @@ public class MainActivity extends AppCompatActivity implements QRCodeView.Delega
     @Override
     protected void onStart() {
         super.onStart();
-        startCamera();
+        mQRCodeView.startCamera();
+        mQRCodeView.startSpotAndShowRect();
     }
 
 
@@ -136,22 +158,5 @@ public class MainActivity extends AppCompatActivity implements QRCodeView.Delega
         tvExpressNo.setTextColor(Color.WHITE);
     }
 
-    /**
-     * 打开扫码
-     */
-    private void startCamera() {
-        rxPermissions
-                .request(Manifest.permission.CAMERA,
-                        Manifest.permission.READ_PHONE_STATE)
-                .subscribe(new Consumer<Boolean>() {
-                    @Override
-                    public void accept(Boolean aBoolean) throws Exception {
-                        if (aBoolean) {
-                            mQRCodeView.startCamera();
-                            mQRCodeView.startSpotAndShowRect();
-                        }
-                    }
-                });
 
-    }
 }
