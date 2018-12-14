@@ -48,6 +48,11 @@
         android:name="android.hardware.camera.flash"
         android:required="false"/>
 ```
+## 图片展示
+![Image text](https://github.com/scalling/Scanner/blob/master/screenshot/1.png)
+![Image text](https://github.com/scalling/Scanner/blob/master/screenshot/2.png)
+![Image text](https://github.com/scalling/Scanner/blob/master/screenshot/3.png)
+
 ## 具体用法请查看DEMO
 >[MainActivity](https://github.com/scalling/Scanner/blob/master/app/src/main/java/com/zm/scanner/MainActivity.java)
 
