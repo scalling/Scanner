@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">手机号码扫描</string>
+    <string name="input_phone_number_hint">请输入手机号</string>
+    <string name="input_express_no_hint">请输入运单号</string>
+    <string name="express_no">运单号</string>
+    <string name="phone_number">手机号</string>
+    <string name="light">手电筒</string>
+    <string name="main_title">录入快递</string>
 
 </resources>

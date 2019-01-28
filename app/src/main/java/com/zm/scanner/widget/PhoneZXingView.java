@@ -1,4 +1,4 @@
-package com.zm.scanner.view;
+package com.zm.scanner.widget;
 
 import android.content.Context;
 import android.graphics.Bitmap;

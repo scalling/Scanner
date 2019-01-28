@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -14,37 +14,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="录入快递"
+            android:text="@string/main_title"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/scan_parent_height">
 
-        <com.zm.scanner.view.PhoneZXingView
+        <com.zm.scanner.widget.PhoneZXingView
             android:id="@+id/my_zxing_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:qrcv_animTime="1000"
+            app:qrcv_animTime="1500"
             app:qrcv_barcodeRectHeight="@dimen/scan_express_height"
             app:qrcv_borderColor="@android:color/white"
-            app:qrcv_borderSize="1dp"
+            app:qrcv_borderSize="0dp"
             app:qrcv_cornerColor="@android:color/white"
-            app:qrcv_cornerLength="20dp"
-            app:qrcv_cornerSize="2dp"
+            app:qrcv_cornerLength="@dimen/scan_corner_length_express_no"
+            app:qrcv_cornerSize="1dp"
+            app:qrcv_isAutoZoom="true"
             app:qrcv_isBarcode="true"
             app:qrcv_isOnlyDecodeScanBoxArea="true"
             app:qrcv_isScanLineReverse="true"
             app:qrcv_isShowDefaultGridScanLineDrawable="false"
             app:qrcv_isShowDefaultScanLineDrawable="true"
             app:qrcv_maskColor="#50000000"
-            app:qrcv_rectWidth="@dimen/scan_express_width"
-            app:qrcv_scanLineColor="@color/colorPrimaryDark"
+            app:qrcv_rectWidth="300dp"
+            app:qrcv_scanLineColor="@color/color_blue"
             app:qrcv_scanLineMargin="0dp"
             app:qrcv_scanLineSize="0.5dp"
-            app:qrcv_topOffset="@dimen/scan_express_height" />
+            app:qrcv_topOffset="@dimen/scan_express_top" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,8 +59,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="运单号"
-                android:textColor="@android:color/white"
+                android:text="@string/express_no"
+                android:textColor="@color/color_808080"
                 android:textSize="16sp" />
 
             <TextView
@@ -69,8 +69,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="手机号"
-                android:textColor="@android:color/white"
+                android:text="@string/phone_number"
+                android:textColor="@color/color_808080"
                 android:textSize="16sp" />
 
             <TextView
@@ -79,8 +79,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="手电筒"
-                android:textColor="@android:color/white"
+                android:text="@string/light"
+                android:textColor="@color/color_808080"
                 android:textSize="16sp" />
         </LinearLayout>
     </RelativeLayout>
@@ -96,20 +96,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:hint="快递公司"
-            android:text="运单号"
+            android:text="@string/express_no"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
-        <EditText
+        <com.zm.scanner.widget.CleanEditText
             android:id="@+id/et_express_no_data"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/tv_express_no_title"
             android:background="@null"
-            android:hint="请输入运单号"
+            android:hint="@string/input_express_no_hint"
             android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
             android:textSize="17sp" />
 
         <View
@@ -130,20 +131,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:hint="快递公司"
-            android:text="手机号"
+            android:text="@string/phone_number"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
-        <EditText
+        <com.zm.scanner.widget.CleanEditText
             android:id="@+id/et_phone_number_data"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/tv_phone_number_title"
             android:background="@null"
-            android:hint="请输入手机号"
+            android:hint="@string/input_phone_number_hint"
             android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
             android:textSize="17sp" />
 
         <View
