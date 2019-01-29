@@ -16,11 +16,16 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        MainActivity.nav(SplashActivity.this);
         findViewById(R.id.btn_scanner).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity.nav(SplashActivity.this);
+            }
+        });
+        findViewById(R.id.btn_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TestActivity.nav(SplashActivity.this);
             }
         });
     }

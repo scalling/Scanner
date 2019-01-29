@@ -7,6 +7,8 @@ import android.util.Log;
 import com.googlecode.tesseract.android.TessBaseAPI;
 import com.zm.scanner.util.Tools;
 
+import cn.bingoogolapple.qrcode.core.BGAQRCodeUtil;
+
 /**
  * Created by Fadi on 6/11/2014.
  */
@@ -25,11 +27,11 @@ public class TessEngine {
     }
 
     public String detectText(Bitmap bitmap) {
-        Log.d(TAG, "Initialization of TessBaseApi");
+        BGAQRCodeUtil.d(TAG, "Initialization of TessBaseApi");
         TessDataManager.initTessTrainedData(context);
         TessBaseAPI tessBaseAPI = new TessBaseAPI();
         String path = TessDataManager.getTesseractFolder();
-        Log.d(TAG, "Tess folder: " + path);
+        BGAQRCodeUtil.d(TAG, "Tess folder: " + path);
         tessBaseAPI.setDebug(true);
         tessBaseAPI.init(path, "eng");
         // 白名单
@@ -37,14 +39,15 @@ public class TessEngine {
         // 黑名单
         tessBaseAPI.setVariable(TessBaseAPI.VAR_CHAR_BLACKLIST, "!@#$%^&*()_+=-[]}{;:'\"\\|~`,./<>?");
         tessBaseAPI.setPageSegMode(TessBaseAPI.PageSegMode.PSM_AUTO_OSD);
-        Log.d(TAG, "Ended initialization of TessEngine");
-        Log.d(TAG, "Running inspection on bitmap");
+        BGAQRCodeUtil.d(TAG, "Ended initialization of TessEngine");
+        BGAQRCodeUtil.d(TAG, "Running inspection on bitmap");
         tessBaseAPI.setImage(bitmap);
         String inspection = tessBaseAPI.getHOCRText(0);
 
-        Log.d(TAG, "Confidence values: " + tessBaseAPI.meanConfidence());
+        BGAQRCodeUtil.d(TAG, "Confidence values: " + tessBaseAPI.meanConfidence());
         tessBaseAPI.end();
         System.gc();
+        BGAQRCodeUtil.e("识别出来的数据：" + inspection);
         return Tools.getTelNum(inspection);
     }
 

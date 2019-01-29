@@ -15,16 +15,16 @@ import android.widget.Toast;
 
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zm.scanner.util.ArmsUtils;
-import com.zm.scanner.widget.PhoneZXingView;
+import com.zm.scanner.widget.NumZXingView;
 
 import cn.bingoogolapple.qrcode.core.BGAQRCodeUtil;
 import cn.bingoogolapple.qrcode.core.BarcodeType;
 import cn.bingoogolapple.qrcode.core.QRCodeView;
 import io.reactivex.functions.Consumer;
 
-public class MainActivity extends AppCompatActivity implements QRCodeView.Delegate, View.OnClickListener {
+public class TestActivity extends AppCompatActivity implements QRCodeView.Delegate, View.OnClickListener {
 
-    private PhoneZXingView mQRCodeView;
+    private NumZXingView mQRCodeView;
     private EditText etExpressNoData;
     private EditText etPhoneNumberData;
     private TextView tvExpressNo;
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements QRCodeView.Delega
                         if (!aBoolean) {
                             Toast.makeText(activity, "扫描二维码需要打开相机的权限", Toast.LENGTH_SHORT).show();
                         } else {
-                            activity.startActivity(new Intent(activity, MainActivity.class));
+                            activity.startActivity(new Intent(activity, TestActivity.class));
 
                         }
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements QRCodeView.Delega
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
         BGAQRCodeUtil.setDebug(true);
         initView();
         initClick();

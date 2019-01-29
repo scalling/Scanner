@@ -7,6 +7,11 @@
     <Button android:id="@+id/btn_scanner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转到扫码" />
+        android:text="跳转到eng.traineddata扫码" />
+
+    <Button android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到num.traineddata扫码" />
 
 </LinearLayout>
