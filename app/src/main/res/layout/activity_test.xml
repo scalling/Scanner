@@ -5,19 +5,8 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@android:color/white">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/main_title"
-            android:textColor="@android:color/black"
-            android:textSize="17sp" />
-    </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/scan_parent_height">
@@ -154,5 +143,19 @@
             android:layout_alignParentBottom="true"
             android:background="#cccccc" />
     </RelativeLayout>
+
+    <com.zm.scanner.widget.RecycledImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:layout_gravity="center_horizontal"/>
+    <com.zm.scanner.widget.RecycledImageView
+        android:id="@+id/iv_img_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:minHeight="45dp"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

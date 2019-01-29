@@ -67,7 +67,7 @@ public class PhoneZXingView extends ZXingView {
                 }
                 Bitmap bitmap = source.renderCroppedGreyscaleBitmap();
                 String phone = TessEngine.Generate(MyApplication.sAppContext).detectText(bitmap);
-                if (!TextUtils.isEmpty(phone) && phone.length() == 11) {
+                if (!TextUtils.isEmpty(phone)) {
                     result = phone;
                     BGAQRCodeUtil.d("解析成功：手机号码" + result);
                 } else {

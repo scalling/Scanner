@@ -48,7 +48,9 @@ public class TessEngine {
         tessBaseAPI.end();
         System.gc();
         BGAQRCodeUtil.e("识别出来的数据：" + inspection);
-        return Tools.getTelNum(inspection);
+        String text = Tools.getTelNum(inspection);
+        BGAQRCodeUtil.e("得到的数据：" + text);
+        return text;
     }
 
 }

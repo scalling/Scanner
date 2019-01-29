@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zm.scanner.util.ArmsUtils;
 import com.zm.scanner.widget.NumZXingView;
+import com.zm.scanner.widget.RecycledImageView;
 
 import cn.bingoogolapple.qrcode.core.BGAQRCodeUtil;
 import cn.bingoogolapple.qrcode.core.BarcodeType;
@@ -31,6 +32,7 @@ public class TestActivity extends AppCompatActivity implements QRCodeView.Delega
     private TextView tvPhoneNumber;
     private TextView tvLight;
     private boolean mIsLight;//是否打开闪光灯
+    private RecycledImageView ivImg, ivImageShow;
 
     public static void nav(final AppCompatActivity activity) {
         RxPermissions rxPermissions = new RxPermissions(activity);
@@ -72,6 +74,9 @@ public class TestActivity extends AppCompatActivity implements QRCodeView.Delega
         tvExpressNo = findViewById(R.id.tv_express_no);
         tvPhoneNumber = findViewById(R.id.tv_phone_number);
         tvLight = findViewById(R.id.tv_light);
+        ivImg = findViewById(R.id.iv_img);
+        ivImageShow = findViewById(R.id.iv_img_show);
+        mQRCodeView.setImageView(ivImg, ivImageShow);
         addTextChangedListener();
     }
 
@@ -221,6 +226,7 @@ public class TestActivity extends AppCompatActivity implements QRCodeView.Delega
             @Override
             public void afterTextChanged(Editable s) {
                 if (TextUtils.isEmpty(etPhoneNumberData.getText().toString()) && mQRCodeView.isScannerPhone()) {
+                    mQRCodeView.startCamera();
                     mQRCodeView.startSpotAndShowRect();
                 }
             }
@@ -239,6 +245,7 @@ public class TestActivity extends AppCompatActivity implements QRCodeView.Delega
             @Override
             public void afterTextChanged(Editable s) {
                 if (TextUtils.isEmpty(etExpressNoData.getText().toString()) && !mQRCodeView.isScannerPhone()) {
+                    mQRCodeView.startCamera();
                     mQRCodeView.startSpotAndShowRect();
                 }
 

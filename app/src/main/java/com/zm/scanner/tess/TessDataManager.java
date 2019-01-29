@@ -90,7 +90,7 @@ public class TessDataManager {
     private static byte[] readRawTrainingData(Context context){
 
         try {
-            InputStream fileInputStream=context.getClass().getResourceAsStream("/assets/eng_traineddata");
+            InputStream fileInputStream=context.getClass().getResourceAsStream("/assets/eng.traineddata");
 
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
